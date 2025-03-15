@@ -1,1 +1,6 @@
-- [首页](README.md)
+- [**首页**](README.md)
+- **API文档**
+    - [签名](docs/api/sign.md)
+    - [批量下单](docs/api/batchorder.md)
+    - [获取订单](docs/api/getorder.md)
+    - [获取余额](docs/api/balance.md)
