@@ -87,10 +87,8 @@ public class Main {
     private static String generateSignature(String timestamp, Map<String, Object> data, String url) throws Exception {
         StringBuilder message = new StringBuilder(timestamp);
         if (data != null && !data.isEmpty()) {
-            // 使用 Gson 将请求参数转为 JSON，并排序
-            TreeMap<String, Object> sortedData = new TreeMap<>(data);
             Gson gson = new GsonBuilder().disableHtmlEscaping().create();
-            String json_data = gson.toJson(sortedData);
+            String json_data = gson.toJson(data);
             message.append("&").append(json_data);
         }
         // 使用 HMAC-SHA256 算法生成签名
